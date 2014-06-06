@@ -36,20 +36,24 @@
 
 #pragma mark - InterpolatedUIImage
 - (UIImage *)createNonInterpolatedUIImageFormCIImage:(CIImage *)image withSize:(CGFloat) size {
-    // Render the CIImage into a CGImage
-    CGImageRef cgImage = [[CIContext contextWithOptions:nil] createCGImage:image fromRect:image.extent];
-    // Now we'll rescale using CoreGraphics
-    UIGraphicsBeginImageContext(CGSizeMake(size, size));
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    // We don't want to interpolate (since we've got a pixel-corrent image)
-    CGContextSetInterpolationQuality(context, kCGInterpolationNone);
-    CGContextDrawImage(context, CGContextGetClipBoundingBox(context), cgImage);
-    // Get the image out
-    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
-    // Tidy up
-    UIGraphicsEndImageContext();
-    CGImageRelease(cgImage);
-    return scaledImage;
+    CGRect extent = CGRectIntegral(image.extent);
+    CGFloat scale = MIN(size/CGRectGetWidth(extent), size/CGRectGetHeight(extent));
+    // create a bitmap image that we'll draw into a bitmap context at the desired size;
+    size_t width = CGRectGetWidth(extent) * scale;
+    size_t height = CGRectGetHeight(extent) * scale;
+    CGColorSpaceRef cs = CGColorSpaceCreateDeviceGray();
+    CGContextRef bitmapRef = CGBitmapContextCreate(nil, width, height, 8, 0, cs, (CGBitmapInfo)kCGImageAlphaNone);
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CGImageRef bitmapImage = [context createCGImage:image fromRect:extent];
+    CGContextSetInterpolationQuality(bitmapRef, kCGInterpolationNone);
+    CGContextScaleCTM(bitmapRef, scale, scale);
+    CGContextDrawImage(bitmapRef, extent, bitmapImage);
+    // Create an image with the contents of our bitmap
+    CGImageRef scaledImage = CGBitmapContextCreateImage(bitmapRef);
+    // Cleanup
+    CGContextRelease(bitmapRef);
+    CGImageRelease(bitmapImage);
+    return [UIImage imageWithCGImage:scaledImage];
 }
 
 #pragma mark - QRCodeGenerator
