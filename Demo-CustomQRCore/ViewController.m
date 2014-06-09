@@ -87,15 +87,15 @@ void ProviderReleaseData (void *info, const void *data, size_t size){
     int pixelNum = imageWidth * imageHeight;
     uint32_t* pCurPtr = rgbImageBuf;
     for (int i = 0; i < pixelNum; i++, pCurPtr++){
-        if ((*pCurPtr & 0xFFFFFF00) == 0xffffff00){    // white to transparent
+        if ((*pCurPtr & 0xFFFFFF00) < 0x99999900){
+            // 改成下面的代码，会将图片转成想要的颜色
+            uint8_t* ptr = (uint8_t*)pCurPtr;
+            ptr[3] = 60; //0~255
+            ptr[2] = 74;
+            ptr[1] = 89;
+        }else{
             uint8_t* ptr = (uint8_t*)pCurPtr;
             ptr[0] = 0;
-        }else{
-            // change color
-            uint8_t* ptr = (uint8_t*)pCurPtr;
-            ptr[3] = red; //0~255
-            ptr[2] = green;
-            ptr[1] = blue;
         }
     }
     // context to image
