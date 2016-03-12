@@ -12,18 +12,7 @@
 		CB8B24501940B33900F18015 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8B244F1940B33900F18015 /* ViewController.m */; };
 		CB8B24531940B33900F18015 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB8B24511940B33900F18015 /* Main.storyboard */; };
 		CB8B24551940B33900F18015 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB8B24541940B33900F18015 /* Images.xcassets */; };
-		CB8B24611940B33A00F18015 /* Demo_CustomQRCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8B24601940B33A00F18015 /* Demo_CustomQRCoreTests.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		CB8B245B1940B33A00F18015 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CB8B243C1940B33900F18015 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = CB8B24431940B33900F18015;
-			remoteInfo = "Demo-CustomQRCore";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		CB8B24441940B33900F18015 /* Demo-CustomQRCore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-CustomQRCore.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,20 +24,10 @@
 		CB8B244F1940B33900F18015 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CB8B24521940B33900F18015 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CB8B24541940B33900F18015 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		CB8B245A1940B33A00F18015 /* Demo-CustomQRCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Demo-CustomQRCoreTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB8B245F1940B33A00F18015 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB8B24601940B33A00F18015 /* Demo_CustomQRCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Demo_CustomQRCoreTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		CB8B24411940B33900F18015 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB8B24571940B33A00F18015 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -62,7 +41,6 @@
 			isa = PBXGroup;
 			children = (
 				CB8B24461940B33900F18015 /* Demo-CustomQRCore */,
-				CB8B245D1940B33A00F18015 /* Demo-CustomQRCoreTests */,
 				CB8B24451940B33900F18015 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				CB8B24441940B33900F18015 /* Demo-CustomQRCore.app */,
-				CB8B245A1940B33A00F18015 /* Demo-CustomQRCoreTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,23 +76,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		CB8B245D1940B33A00F18015 /* Demo-CustomQRCoreTests */ = {
-			isa = PBXGroup;
-			children = (
-				CB8B24601940B33A00F18015 /* Demo_CustomQRCoreTests.m */,
-				CB8B245E1940B33A00F18015 /* Supporting Files */,
-			);
-			path = "Demo-CustomQRCoreTests";
-			sourceTree = "<group>";
-		};
-		CB8B245E1940B33A00F18015 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				CB8B245F1940B33A00F18015 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -136,24 +96,6 @@
 			productReference = CB8B24441940B33900F18015 /* Demo-CustomQRCore.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CB8B24591940B33A00F18015 /* Demo-CustomQRCoreTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = CB8B24671940B33A00F18015 /* Build configuration list for PBXNativeTarget "Demo-CustomQRCoreTests" */;
-			buildPhases = (
-				CB8B24561940B33A00F18015 /* Sources */,
-				CB8B24571940B33A00F18015 /* Frameworks */,
-				CB8B24581940B33A00F18015 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				CB8B245C1940B33A00F18015 /* PBXTargetDependency */,
-			);
-			name = "Demo-CustomQRCoreTests";
-			productName = "Demo-CustomQRCoreTests";
-			productReference = CB8B245A1940B33A00F18015 /* Demo-CustomQRCoreTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -165,10 +107,6 @@
 				TargetAttributes = {
 					CB8B24431940B33900F18015 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					CB8B24591940B33A00F18015 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = CB8B24431940B33900F18015;
 					};
 				};
 			};
@@ -186,7 +124,6 @@
 			projectRoot = "";
 			targets = (
 				CB8B24431940B33900F18015 /* Demo-CustomQRCore */,
-				CB8B24591940B33A00F18015 /* Demo-CustomQRCoreTests */,
 			);
 		};
 /* End PBXProject section */
@@ -198,13 +135,6 @@
 			files = (
 				CB8B24531940B33900F18015 /* Main.storyboard in Resources */,
 				CB8B24551940B33900F18015 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CB8B24581940B33A00F18015 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,23 +151,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CB8B24561940B33A00F18015 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB8B24611940B33A00F18015 /* Demo_CustomQRCoreTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CB8B245C1940B33A00F18015 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = CB8B24431940B33900F18015 /* Demo-CustomQRCore */;
-			targetProxy = CB8B245B1940B33A00F18015 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CB8B24511940B33900F18015 /* Main.storyboard */ = {
@@ -350,44 +264,6 @@
 			};
 			name = Release;
 		};
-		CB8B24681940B33A00F18015 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Demo-CustomQRCore.app/Demo-CustomQRCore";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Demo-CustomQRCoreTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "yourtion.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Debug;
-		};
-		CB8B24691940B33A00F18015 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Demo-CustomQRCore.app/Demo-CustomQRCore";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Demo-CustomQRCoreTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				METAL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_BUNDLE_IDENTIFIER = "yourtion.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -405,15 +281,6 @@
 			buildConfigurations = (
 				CB8B24651940B33A00F18015 /* Debug */,
 				CB8B24661940B33A00F18015 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CB8B24671940B33A00F18015 /* Build configuration list for PBXNativeTarget "Demo-CustomQRCoreTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CB8B24681940B33A00F18015 /* Debug */,
-				CB8B24691940B33A00F18015 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
