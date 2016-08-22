@@ -32,10 +32,14 @@
     // Dispose of any resources that can be recreated.
 }
 
-//-(UIImage *)generateCustomQRCode:(NSString *)string andSize:(CGFloat)size andColor:(UIColor)color {
-//    UIImage *qrcode = [self createNonInterpolatedUIImageFormCIImage:[self createQRForString:@"http://blog.yourtion.com"] withSize:250.0f];
-//    return [self imageBlackToTransparent:qrcode withRed:color andGreen:color andBlue:89.0f];
-//}
+-(UIImage *)generateCustomQRCode:(NSString *)string andSize:(CGFloat)size andColor:(UIColor *)color {
+    UIImage *qrcode = [self createNonInterpolatedUIImageFormCIImage:[self createQRForString:@"http://blog.yourtion.com"] withSize:size];
+    const CGFloat *_components = CGColorGetComponents(color.CGColor);
+    CGFloat red = _components[0];
+    CGFloat green = _components[1];
+    CGFloat blue = _components[2];
+    return [self imageBlackToTransparent:qrcode withRed:red andGreen:green andBlue:blue];
+}
 
 #pragma mark - InterpolatedUIImage
 - (UIImage *)createNonInterpolatedUIImageFormCIImage:(CIImage *)image withSize:(CGFloat)size {
