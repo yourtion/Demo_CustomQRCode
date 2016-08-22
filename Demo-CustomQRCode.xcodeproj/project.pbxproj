@@ -13,6 +13,7 @@
 		CBC754F61D6AEFCB001A498D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC754F41D6AEFCB001A498D /* Main.storyboard */; };
 		CBC754F81D6AEFCB001A498D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC754F71D6AEFCB001A498D /* Assets.xcassets */; };
 		CBC754FB1D6AEFCB001A498D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC754F91D6AEFCB001A498D /* LaunchScreen.storyboard */; };
+		CBC755041D6AF4A5001A498D /* CustomQRCode.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC755031D6AF4A5001A498D /* CustomQRCode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		CBC754F71D6AEFCB001A498D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CBC754FA1D6AEFCB001A498D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CBC754FC1D6AEFCB001A498D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBC755021D6AF4A5001A498D /* CustomQRCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomQRCode.h; sourceTree = "<group>"; };
+		CBC755031D6AF4A5001A498D /* CustomQRCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomQRCode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				CBC754F91D6AEFCB001A498D /* LaunchScreen.storyboard */,
 				CBC754FC1D6AEFCB001A498D /* Info.plist */,
 				CBC754EB1D6AEFCB001A498D /* Supporting Files */,
+				CBC755021D6AF4A5001A498D /* CustomQRCode.h */,
+				CBC755031D6AF4A5001A498D /* CustomQRCode.m */,
 			);
 			path = "Demo-CustomQRCode";
 			sourceTree = "<group>";
@@ -151,6 +156,7 @@
 			files = (
 				CBC754F31D6AEFCB001A498D /* ViewController.m in Sources */,
 				CBC754F01D6AEFCB001A498D /* AppDelegate.m in Sources */,
+				CBC755041D6AF4A5001A498D /* CustomQRCode.m in Sources */,
 				CBC754ED1D6AEFCB001A498D /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +308,7 @@
 				CBC755011D6AEFCB001A498D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
