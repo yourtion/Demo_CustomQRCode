@@ -10,8 +10,6 @@
 
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UIImageView *qrcodeView;
-            
-
 @end
 
 @implementation ViewController
@@ -34,8 +32,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+//-(UIImage *)generateCustomQRCode:(NSString *)string andSize:(CGFloat)size andColor:(UIColor)color {
+//    UIImage *qrcode = [self createNonInterpolatedUIImageFormCIImage:[self createQRForString:@"http://blog.yourtion.com"] withSize:250.0f];
+//    return [self imageBlackToTransparent:qrcode withRed:color andGreen:color andBlue:89.0f];
+//}
+
 #pragma mark - InterpolatedUIImage
-- (UIImage *)createNonInterpolatedUIImageFormCIImage:(CIImage *)image withSize:(CGFloat) size {
+- (UIImage *)createNonInterpolatedUIImageFormCIImage:(CIImage *)image withSize:(CGFloat)size {
     CGRect extent = CGRectIntegral(image.extent);
     CGFloat scale = MIN(size/CGRectGetWidth(extent), size/CGRectGetHeight(extent));
     // create a bitmap image that we'll draw into a bitmap context at the desired size;
@@ -70,9 +73,11 @@
 }
 
 #pragma mark - imageToTransparent
+
 void ProviderReleaseData (void *info, const void *data, size_t size){
     free((void*)data);
 }
+
 - (UIImage*)imageBlackToTransparent:(UIImage*)image withRed:(CGFloat)red andGreen:(CGFloat)green andBlue:(CGFloat)blue{
     const int imageWidth = image.size.width;
     const int imageHeight = image.size.height;

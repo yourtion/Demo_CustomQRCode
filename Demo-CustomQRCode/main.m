@@ -1,9 +1,9 @@
 //
 //  main.m
-//  Demo-CustomQRCore
+//  Demo-CustomQRCode
 //
-//  Created by YourtionGuo on 6/5/14.
-//  Copyright (c) 2014 yourtion. All rights reserved.
+//  Created by YourtionGuo on 8/22/16.
+//  Copyright © 2016 Yourtion. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

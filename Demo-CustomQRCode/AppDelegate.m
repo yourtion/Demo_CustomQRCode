@@ -1,20 +1,19 @@
 //
 //  AppDelegate.m
-//  Demo-CustomQRCore
+//  Demo-CustomQRCode
 //
-//  Created by YourtionGuo on 6/5/14.
-//  Copyright (c) 2014 yourtion. All rights reserved.
+//  Created by YourtionGuo on 8/22/16.
+//  Copyright © 2016 Yourtion. All rights reserved.
 //
 
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
-            
 
 @end
 
 @implementation AppDelegate
-            
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
